@@ -22,11 +22,5 @@ Your objectives are to:
 
 ## Completion
 
-Once you have completed the exercise to the best of your ability, you may either:
-
-A. Submit a "pull request" to https://github.com/gbarnett-cs/iOSChallenge
-
-or
-
-B. zip up your code directory and email it to gbarnett@communispace.com.  
+Once you have completed the exercise to the best of your ability, you may zip up your code directory and email it to Glenn, or submit a pull request to this repo (https://github.com/gbarnett-cs/iOSChallenge).
 
