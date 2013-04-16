@@ -24,3 +24,5 @@ Your objectives are to:
 
 Once you have completed the exercise to the best of your ability, you may zip up your code directory and email it to Glenn, or submit a pull request to this repo (https://github.com/gbarnett-cs/iOSChallenge).
 
+The goal for completion is by EOD on Friday, 4/19.
+ 
