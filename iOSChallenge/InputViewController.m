@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Communispace. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "InputViewController.h"
 
-@interface ViewController ()
+@interface InputViewController ()
 
 @end
 
-@implementation ViewController
+@implementation InputViewController
 
 - (void)viewDidLoad
 {

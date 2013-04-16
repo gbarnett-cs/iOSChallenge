@@ -17,12 +17,13 @@
 		26E92A9C171D72CA00C94823 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E92A9B171D72CA00C94823 /* Default@2x.png */; };
 		26E92A9E171D72CA00C94823 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26E92A9D171D72CA00C94823 /* Default-568h@2x.png */; };
 		26E92AA1171D72CA00C94823 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E92A9F171D72CA00C94823 /* MainStoryboard.storyboard */; };
-		26E92AA4171D72CA00C94823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E92AA3171D72CA00C94823 /* ViewController.m */; };
+		26E92AA4171D72CA00C94823 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E92AA3171D72CA00C94823 /* InputViewController.m */; };
 		26E92AAC171D72CA00C94823 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E92AAB171D72CA00C94823 /* SenTestingKit.framework */; };
 		26E92AAD171D72CA00C94823 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E92A87171D72C900C94823 /* UIKit.framework */; };
 		26E92AAE171D72CA00C94823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E92A89171D72C900C94823 /* Foundation.framework */; };
 		26E92AB6171D72CA00C94823 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 26E92AB4171D72CA00C94823 /* InfoPlist.strings */; };
 		26E92AB9171D72CA00C94823 /* iOSChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E92AB8171D72CA00C94823 /* iOSChallengeTests.m */; };
+		26E92AC4171D74C400C94823 /* OutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E92AC3171D74C400C94823 /* OutputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +51,16 @@
 		26E92A9B171D72CA00C94823 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		26E92A9D171D72CA00C94823 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		26E92AA0171D72CA00C94823 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		26E92AA2171D72CA00C94823 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		26E92AA3171D72CA00C94823 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		26E92AA2171D72CA00C94823 /* InputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		26E92AA3171D72CA00C94823 /* InputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		26E92AAA171D72CA00C94823 /* iOSChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E92AAB171D72CA00C94823 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		26E92AB3171D72CA00C94823 /* iOSChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		26E92AB5171D72CA00C94823 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		26E92AB7171D72CA00C94823 /* iOSChallengeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSChallengeTests.h; sourceTree = "<group>"; };
 		26E92AB8171D72CA00C94823 /* iOSChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSChallengeTests.m; sourceTree = "<group>"; };
+		26E92AC2171D74C400C94823 /* OutputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputViewController.h; sourceTree = "<group>"; };
+		26E92AC3171D74C400C94823 /* OutputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +120,13 @@
 		26E92A8D171D72C900C94823 /* iOSChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				26E92A9F171D72CA00C94823 /* MainStoryboard.storyboard */,
+				26E92AA2171D72CA00C94823 /* InputViewController.h */,
+				26E92AA3171D72CA00C94823 /* InputViewController.m */,
+				26E92AC2171D74C400C94823 /* OutputViewController.h */,
+				26E92AC3171D74C400C94823 /* OutputViewController.m */,
 				26E92A96171D72C900C94823 /* AppDelegate.h */,
 				26E92A97171D72CA00C94823 /* AppDelegate.m */,
-				26E92A9F171D72CA00C94823 /* MainStoryboard.storyboard */,
-				26E92AA2171D72CA00C94823 /* ViewController.h */,
-				26E92AA3171D72CA00C94823 /* ViewController.m */,
 				26E92A8E171D72C900C94823 /* Supporting Files */,
 			);
 			path = iOSChallenge;
@@ -272,7 +277,8 @@
 			files = (
 				26E92A94171D72C900C94823 /* main.m in Sources */,
 				26E92A98171D72CA00C94823 /* AppDelegate.m in Sources */,
-				26E92AA4171D72CA00C94823 /* ViewController.m in Sources */,
+				26E92AA4171D72CA00C94823 /* InputViewController.m in Sources */,
+				26E92AC4171D74C400C94823 /* OutputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

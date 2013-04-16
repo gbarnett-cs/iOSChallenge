@@ -1,23 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="InputViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a word" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bi-60-PgT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="ucv-Ud-E4X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11a-BO-sBT">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SNY-WB-Jd4" kind="modal" identifier="InputToOutput" modalTransitionStyle="crossDissolve" id="hG5-Ca-QUY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="InputViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN2-u5-1XZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="qHw-vq-1C0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.37457540760869568" green="0.37457540760869568" blue="0.37457540760869568" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eN2-u5-1XZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="3YG-FH-7q6"/>
+                            <constraint firstItem="1Bi-60-PgT" firstAttribute="trailing" secondItem="11a-BO-sBT" secondAttribute="trailing" type="default" id="Mxg-B0-5ub"/>
+                            <constraint firstItem="11a-BO-sBT" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="XkE-cB-tVp"/>
+                            <constraint firstItem="11a-BO-sBT" firstAttribute="leading" secondItem="1Bi-60-PgT" secondAttribute="leading" type="default" id="aJe-zM-xOl"/>
+                            <constraint firstItem="1Bi-60-PgT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="93" id="alq-XS-bqf"/>
+                            <constraint firstItem="eN2-u5-1XZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="dKe-kl-icC"/>
+                            <constraint firstItem="11a-BO-sBT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="138" id="wws-zz-ACm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="307" y="101"/>
+        </scene>
+        <!--Output View Controller-->
+        <scene sceneID="OMv-0l-6aG">
+            <objects>
+                <viewController id="SNY-WB-Jd4" customClass="OutputViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74f-kR-Q1k">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-bf-v9C">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPt-Si-g80">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="5ys-CQ-OV2"/>
+                                    <constraint firstAttribute="height" constant="48" id="c3q-xU-odX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.17375798710635576" green="0.51630434782608692" blue="0.25939457728628856" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The word you entered is:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaJ-KO-fcx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OutputViewController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hev-9A-zSm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="mJD-IP-kff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.37457540760000002" green="0.37457540760000002" blue="0.37457540760000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hev-9A-zSm" firstAttribute="top" secondItem="74f-kR-Q1k" secondAttribute="top" constant="8" id="2D1-1h-LAI"/>
+                            <constraint firstItem="XPt-Si-g80" firstAttribute="leading" secondItem="dWM-bf-v9C" secondAttribute="leading" type="default" id="D34-NJ-Xly"/>
+                            <constraint firstItem="XPt-Si-g80" firstAttribute="centerX" secondItem="74f-kR-Q1k" secondAttribute="centerX" type="default" id="baL-dl-cUQ"/>
+                            <constraint firstItem="XPt-Si-g80" firstAttribute="top" secondItem="74f-kR-Q1k" secondAttribute="top" constant="79" id="dpU-xs-9TY"/>
+                            <constraint firstItem="yaJ-KO-fcx" firstAttribute="leading" secondItem="XPt-Si-g80" secondAttribute="leading" type="default" id="gU6-hx-OMl"/>
+                            <constraint firstItem="dWM-bf-v9C" firstAttribute="trailing" secondItem="XPt-Si-g80" secondAttribute="trailing" type="default" id="sqC-WW-iAn"/>
+                            <constraint firstItem="yaJ-KO-fcx" firstAttribute="top" secondItem="74f-kR-Q1k" secondAttribute="top" constant="49" id="usk-Fw-cK1"/>
+                            <constraint firstItem="dWM-bf-v9C" firstAttribute="top" secondItem="74f-kR-Q1k" secondAttribute="top" constant="144" id="xtj-hK-BBl"/>
+                            <constraint firstItem="Hev-9A-zSm" firstAttribute="leading" secondItem="74f-kR-Q1k" secondAttribute="leading" constant="8" id="yOa-b7-9Dn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="XPt-Si-g80" id="UXj-jA-HP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8D-6l-p3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="101"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="InputViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InputViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="OutputViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OutputViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
